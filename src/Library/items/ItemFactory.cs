@@ -15,6 +15,9 @@ namespace RoleplayGame.Items
         PowerGlove = 8,
         Gem = 9,
         Helmet = 10,
+        MagicStick = 11,
+        Spear = 12,
+        Stick = 13,
     }
 
     /// <summary>
@@ -41,6 +44,9 @@ namespace RoleplayGame.Items
                 case ItemType.PowerGlove: return new PowerGlove();
                 case ItemType.Gem: return new Gem();
                 case ItemType.Helmet: return new Helmet();
+                case ItemType.MagicStick: return new MagicStick();
+                case ItemType.Spear: return new Spear();
+                case ItemType.Stick: return new Stick();
 
 
                 default: return null;
