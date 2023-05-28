@@ -2,7 +2,7 @@ using System;
 
 namespace RoleplayGame.Items
 {
-    public class Palo : IAttackItem
+    public class Club : IAttackItem
     {
     public int AttackPower
     { 
@@ -11,5 +11,10 @@ namespace RoleplayGame.Items
             return 80;
         }
     }
+
+        public override string ToString()
+        {
+            return "Club";
+        }
     }
 }
