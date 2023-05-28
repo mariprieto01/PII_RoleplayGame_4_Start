@@ -12,6 +12,8 @@ namespace RoleplayGame.Items
         Sword = 5,
         Breastplate = 6,
         Club = 7,
+        PowerGlove = 8,
+        Gem = 9,
     }
 
     /// <summary>
@@ -35,6 +37,9 @@ namespace RoleplayGame.Items
                 case ItemType.Sword: return new Sword();
                 case ItemType.Breastplate: return new Breastplate();
                 case ItemType.Club: return new Club();
+                case ItemType.PowerGlove: return new PowerGlove();
+                case ItemType.Gem: return new Gem();
+
 
                 default: return null;
             }
