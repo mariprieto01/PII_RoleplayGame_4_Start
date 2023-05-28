@@ -2,7 +2,7 @@ using System;
 
 namespace RoleplayGame.Items
 {
-    public class Palo : IAttackItem
+    public class Stick : IAttackItem
     {
     public int AttackPower
     { 
