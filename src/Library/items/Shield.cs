@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace RoleplayGame.Items
 {
     public class Shield : IDefenseItem
@@ -6,10 +9,13 @@ namespace RoleplayGame.Items
         {
             get
             {
-
                 return 80;
-
             }
+        }
+
+        public override string ToString()
+        {
+            return "Shield";
         }
     }
 }
