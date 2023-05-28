@@ -2,7 +2,7 @@ using System;
 
 namespace RoleplayGame.Items
 {
-    public class Coraza : IDefenseItem
+    public class Breastplate : IDefenseItem
     {
     public int DefensePower
     { 
@@ -11,6 +11,10 @@ namespace RoleplayGame.Items
             return 80;
         }
     }
-    
+
+        public override string ToString()
+        {
+            return "Breastplate";
+        }
     }
 }
