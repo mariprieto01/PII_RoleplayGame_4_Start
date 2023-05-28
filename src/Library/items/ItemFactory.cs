@@ -14,6 +14,7 @@ namespace RoleplayGame.Items
         Club = 7,
         PowerGlove = 8,
         Gem = 9,
+        Helmet = 10,
     }
 
     /// <summary>
@@ -39,6 +40,7 @@ namespace RoleplayGame.Items
                 case ItemType.Club: return new Club();
                 case ItemType.PowerGlove: return new PowerGlove();
                 case ItemType.Gem: return new Gem();
+                case ItemType.Helmet: return new Helmet();
 
 
                 default: return null;
