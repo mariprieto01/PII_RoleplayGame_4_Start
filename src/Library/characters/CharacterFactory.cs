@@ -11,7 +11,7 @@ namespace RoleplayGame.Characters
         Knight = 4,
         Giant = 5,
         Archer = 6,
-        Minutar = 7,
+        Minotaur = 7,
     }
 
     /// <summary>
@@ -32,7 +32,7 @@ namespace RoleplayGame.Characters
                 case CharacterType.Knight: return new Knight(name);
                 case CharacterType.Giant: return new Giant(name);
                 case CharacterType.Archer: return new Archer(name);
-                case CharacterType.Minutar: return new Minutar(name);
+                case CharacterType.Minotaur: return new Minotaur(name);
 
                 default: throw new System.Exception($"Invalid character {type}");
             }
