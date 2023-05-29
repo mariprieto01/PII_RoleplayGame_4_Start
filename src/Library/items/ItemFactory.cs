@@ -1,3 +1,5 @@
+using System;
+
 namespace RoleplayGame.Items
 {
     /// <summary>
@@ -51,6 +53,14 @@ namespace RoleplayGame.Items
 
                 default: return null;
             }
+        }
+
+        public static IItem GetRandomItem()
+        {
+            Random random = new Random();
+            Array values = Enum.GetValues(typeof(ItemType));
+            ItemType randomItemType = (ItemType)values.GetValue(random.Next(values.Length));
+            return GetItem(randomItemType);
         }
     }
 }
