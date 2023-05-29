@@ -101,6 +101,9 @@ En el escenario, los personajes batallarán de la siguiente forma:
     - El victorioso de la primer batalla se cruza en batalla con el victorioso de la segunda.
     - Quien gane se declara victorioso de la Tierra Media.
     
+- Si son 5 integrantes: 
+    Crear escenario con 5 personajes, cada uno tiene 2 elementos al azar. Se pelean el (1 vs 2) y (3 vs 4), los 2 ganadores recuperan la vida y se enfrentan, y el que gane se recupera y se enfrenta contra el 5.  El último ganador se declara victorioso de la Tierra Media
+
 ## Parte VII
 
 Con este ejercicio se les ha entregado un diagrama de clases como el que se muestra al final de este Readme.
