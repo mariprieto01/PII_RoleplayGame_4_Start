@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RoleplayGame.Items;
+using System;
 
 namespace RoleplayGame.Characters
 {
@@ -132,7 +133,7 @@ namespace RoleplayGame.Characters
             }
         }
 
-        public void HelthItself()
+        public void HealthItself()
         {
             this.Health = 100;
         }

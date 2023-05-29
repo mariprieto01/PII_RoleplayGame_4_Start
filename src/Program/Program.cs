@@ -9,7 +9,6 @@ namespace Program
             // IScenario scenario = new ConsoleScenario();
             // scenario.Setup();
             // scenario.Run();
-
             IScenario scenario = new TestScenario();
             scenario.Setup();
             scenario.Run();

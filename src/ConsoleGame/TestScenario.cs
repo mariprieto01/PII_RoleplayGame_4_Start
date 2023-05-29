@@ -14,21 +14,22 @@ namespace Program
 
         public void Setup()
         {
-            Giant giant = new Giant("Giant");
             Minotaur Minotaur = new Minotaur("Minotaur");
             Archer archer = new Archer("Archer");
             Elf elf = new Elf("Elf");
             Dwarf dwarf = new Dwarf("Dwarf");
+            Giant giant = new Giant("Giant");
 
+            characters.Add(archer);
             characters.Add(giant);
             characters.Add(Minotaur);
-            characters.Add(archer);
             characters.Add(elf);
             characters.Add(dwarf);
 
             foreach (Character character in characters)
             {
-                character.AddItems(new List<IItem>(new IItem[] { ItemFactory.GetRandomItem(), ItemFactory.GetRandomItem() }));
+                character.AddItem(ItemFactory.GetRandomItem(character.Items));
+                character.AddItem(ItemFactory.GetRandomItem(character.Items));
             }
         }
 
@@ -38,27 +39,27 @@ namespace Program
             encounterOne.Reporter = new ConsoleReporter();
             encounterOne.DoEncounter();
             Character EnconunterOneWinner = encounterOne.DecideWinner();
-            EnconunterOneWinner.HelthItself();
+            EnconunterOneWinner.HealthItself();
 
-            AttackEncounter encounterTwo = EncounterFactory.GetEncounter(EncounterType.Exchange, characters[2], characters[3]) as AttackEncounter;
+            AttackEncounter encounterTwo = EncounterFactory.GetEncounter(EncounterType.Attack, characters[2], characters[3]) as AttackEncounter;
             encounterTwo.Reporter = new ConsoleReporter();
             encounterTwo.DoEncounter();
             Character EnconunterTwoWinner = encounterTwo.DecideWinner();
-            EnconunterOneWinner.HelthItself();
+            EnconunterOneWinner.HealthItself();
 
 
-            AttackEncounter encounterThree = EncounterFactory.GetEncounter(EncounterType.Exchange, EnconunterOneWinner, EnconunterTwoWinner) as AttackEncounter;
+            AttackEncounter encounterThree = EncounterFactory.GetEncounter(EncounterType.Attack, EnconunterOneWinner, EnconunterTwoWinner) as AttackEncounter;
             encounterThree.Reporter = new ConsoleReporter();
             encounterThree.DoEncounter();
             Character EnconunterThreeWinner = encounterThree.DecideWinner();
-            EnconunterOneWinner.HelthItself();
+            EnconunterOneWinner.HealthItself();
 
 
             AttackEncounter Final = EncounterFactory.GetEncounter(EncounterType.Attack, EnconunterThreeWinner, characters[4]) as AttackEncounter;
             Final.Reporter = new ConsoleReporter();
             Final.DoEncounter();
             Character FinalWinner = Final.DecideWinner();
-            EnconunterOneWinner.HelthItself();
+            EnconunterOneWinner.HealthItself();
 
             Console.WriteLine("The winner is: " + FinalWinner.Name);
         }

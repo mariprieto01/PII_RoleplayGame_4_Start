@@ -58,7 +58,7 @@ namespace RoleplayGame.Encounters
 
         public Character DecideWinner()
         {
-            if (this.Character1.IsDead)
+            if (this.Character1.IsDead || this.Character1 == null)
             {
                 return this.Character2;
             }
