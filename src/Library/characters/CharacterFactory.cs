@@ -8,6 +8,10 @@ namespace RoleplayGame.Characters
         Elf = 1,
         Wizard = 2,
         Dwarf = 3,
+        Knight = 4,
+        Giant = 5,
+        Archer = 6,
+        Minutar = 7,
     }
 
     /// <summary>
@@ -25,6 +29,11 @@ namespace RoleplayGame.Characters
                 case CharacterType.Elf: return new Elf(name);
                 case CharacterType.Wizard: return new Wizard(name);
                 case CharacterType.Dwarf: return new Dwarf(name);
+                case CharacterType.Knight: return new Knight(name);
+                case CharacterType.Giant: return new Giant(name);
+                case CharacterType.Archer: return new Archer(name);
+                case CharacterType.Minutar: return new Minutar(name);
+
                 default: throw new System.Exception($"Invalid character {type}");
             }
         }
