@@ -20,8 +20,8 @@ namespace RoleplayGame.Characters
         /// Nivel del vida del personaje.
         /// </summary>
         protected int health;
-        public int Health 
-        { 
+        public int Health
+        {
             get
             {
                 return this.health;
@@ -38,7 +38,8 @@ namespace RoleplayGame.Characters
         /// <typeparam name="IItem"></typeparam>
         /// <returns>La lista de items</returns>
         protected List<IItem> items = new List<IItem>();
-        public List<IItem> Items {
+        public List<IItem> Items
+        {
             get
             {
                 return this.items;
@@ -88,7 +89,7 @@ namespace RoleplayGame.Characters
                 {
                     if (item is IAttackItem)
                     {
-                        attackPower += ((IAttackItem) item).AttackPower;
+                        attackPower += ((IAttackItem)item).AttackPower;
                     }
                 }
                 return attackPower;
@@ -108,7 +109,7 @@ namespace RoleplayGame.Characters
                 {
                     if (item is IDefenseItem)
                     {
-                        defensePower += ((IDefenseItem) item).DefensePower;
+                        defensePower += ((IDefenseItem)item).DefensePower;
                     }
                 }
                 return defensePower;
@@ -131,6 +132,11 @@ namespace RoleplayGame.Characters
             }
         }
 
+        public void HelthItself()
+        {
+            this.Health = 100;
+        }
+
         public override string ToString()
         {
             string items = "";
@@ -138,7 +144,7 @@ namespace RoleplayGame.Characters
             {
                 items += (items.Equals("") ? "" : ", ") + item.ToString();
             }
-            return $"{ this.GetType().Name } called { this.Name } with a { items }. Health: { this.Health }";
+            return $"{this.GetType().Name} called {this.Name} with a {items}. Health: {this.Health}";
         }
     }
 }
