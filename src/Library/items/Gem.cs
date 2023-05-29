@@ -5,12 +5,10 @@ namespace RoleplayGame.Items
 {
     public class Gem : IAttackItem
     {
-        public int AttackPower
+        public int AttackPower { get; }
+        public Gem(int attackPower)
         {
-            get
-            {
-                return 40;
-            }
+            AttackPower = attackPower;
         }
 
         public override string ToString()

@@ -5,21 +5,32 @@ namespace RoleplayGame.Items
 {
     public class PowerGlove : IAttackItem
     {
-        public int attackPower;
+        public List<Gem> gems;
         public int AttackPower
         {
             get
             {
-                return attackPower;
+                int totalAttackPower = 0;
+                foreach (var gem in gems)
+                {
+                    totalAttackPower += gem.AttackPower;
+                }
+                return totalAttackPower;
             }
         }
         public PowerGlove()
         {
-            attackPower = 60;
+            gems = new List<Gem>
+            {
+                new Gem(30),
+                new Gem(15),
+                new Gem(10)
+            };
         }
+
         public void AddGem(Gem gem)
         {
-            attackPower += gem.AttackPower;
+            gems.Add(gem);
         }
 
         public override string ToString()
