@@ -1,17 +1,16 @@
-using System.Collections.Generic;
 using RoleplayGame.Items;
 
 namespace RoleplayGame.Characters
 {
     /// <summary>
-    /// Personaje Elfo
+    /// Personaje Gigante
     /// </summary>
-    public class Elf : Character
+    public class Giant : Character
     {
-        public Elf(string name)
+        public Giant(string name)
             : base(name)
         {
-            this.Health = 120;
+            this.Health = 200;
         }
     }
 }

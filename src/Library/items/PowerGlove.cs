@@ -15,7 +15,7 @@ namespace RoleplayGame.Items
         }
         public PowerGlove()
         {
-            attackPower = 0;
+            attackPower = 60;
         }
         public void AddGem(Gem gem)
         {

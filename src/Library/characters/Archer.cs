@@ -1,17 +1,16 @@
-using System.Collections.Generic;
 using RoleplayGame.Items;
 
 namespace RoleplayGame.Characters
 {
     /// <summary>
-    /// Personaje Elfo
+    /// Personaje Arquero
     /// </summary>
-    public class Elf : Character
+    public class Archer : Character
     {
-        public Elf(string name)
+        public Archer(string name)
             : base(name)
         {
-            this.Health = 120;
+            this.Health = 80;
         }
     }
 }

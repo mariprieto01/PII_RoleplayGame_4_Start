@@ -4,12 +4,17 @@ namespace RoleplayGame.Items
 {
     public class Stick : IAttackItem
     {
-    public int AttackPower
-    { 
-        get 
+        public int AttackPower
         {
-            return 80;
+            get
+            {
+                return 34;
+            }
         }
-    }
+
+        public override string ToString()
+        {
+            return "Stick";
+        }
     }
 }
